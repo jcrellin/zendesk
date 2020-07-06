@@ -108,7 +108,7 @@ be already defined when the JS is evaluated.
 Compatibility
 -------------
 
-Tested with Rails 3.0.x running under Ruby 1.9.2.
+Tested with Rails 4.x running under Ruby 2.0.0-p648.
 
 
 TODO

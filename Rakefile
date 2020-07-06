@@ -1,28 +1,27 @@
 require 'rake'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
-require 'lib/zendesk/version'
+require  "lib/zendesk/version"
 
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name             = 'vjt-zendesk'
+    gemspec.name             = 'jcrellin-zendesk'
 
     gemspec.summary          = 'Zendesk on Rails - Dropbox and Remote Authentication'
     gemspec.description      = 'The plugin implements the HTML generation code for the '   \
                                'Zendesk dropbox and the necessary controller and routing ' \
                                'code to implement remote authentication'
 
-    gemspec.authors          = ['Marcello Barnaba']
-    gemspec.email            = 'vjt@openssl.it'
-    gemspec.homepage         = 'http://github.com/vjt/zendesk'
+    gemspec.authors          = ['Marcello Barnaba', 'Jonathan Crellin']
+    gemspec.email            = 'jcrellin@sprigghr.com'
+    gemspec.homepage         = 'http://github.com/jcrellin/zendesk'
     gemspec.files            = %w( README.md Rakefile rails/init.rb ) + Dir['lib/**/*']
     gemspec.extra_rdoc_files = %w( README.md )
-    gemspec.has_rdoc         = true
     gemspec.version          = Zendesk::Version
     gemspec.require_path     = 'lib'
 
-    gemspec.add_dependency('rails', '~> 3.0')
+    gemspec.add_dependency('rails', '~> 4.0')
   end
 rescue LoadError
   puts 'Jeweler not available. Install it with: gem install jeweler'
